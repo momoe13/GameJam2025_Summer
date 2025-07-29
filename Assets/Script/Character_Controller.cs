@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Character_Controller : MonoBehaviour
@@ -10,6 +11,11 @@ public class Character_Controller : MonoBehaviour
 
     [SerializeField] float attack_Timing;//攻撃タイミング
     float                   attack_Time;//攻撃までのカウントダウン用タイム
+    protected string            target;//攻撃するオブジェクト
+
+
+    [SerializeField]
+    protected bool MoveFlg = false;
 
     private void Start()
     {
@@ -23,10 +29,13 @@ public class Character_Controller : MonoBehaviour
     {
         Move();
         attack_Time = Time.time;
+        if (target != null) { Attack(); }
+ 
     }
 
     protected virtual void Move()
     {
+        if(MoveFlg) return;
         Vector2 pos = transform.position;
         transform.position = new Vector2(pos.x+(speed * target_direction) , pos.y);
 
@@ -34,11 +43,26 @@ public class Character_Controller : MonoBehaviour
 
     protected virtual void Attack()
     {
-        if(attack_Time < attack_Timing)return;
+        //Debug.Log("上位呼び出し");
+       if(attack_Time < attack_Timing)return;
 
     }
-    protected virtual void Damage(int dm)
+    public void Damage(int dm)
     {
+        Debug.Log("攻撃された！"+this.gameObject.name);
         hp -= dm;
+        Die();
+    }
+    protected virtual void Die()
+    {
+        Destroy(this.gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.Log("あああ");
+        MoveFlg = true;
+        target = collision.gameObject.name;
+        Debug.Log(target);
+        Attack();
     }
 }
