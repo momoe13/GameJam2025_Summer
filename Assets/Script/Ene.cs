@@ -1,12 +1,24 @@
+using UnityEditor;
 using UnityEngine;
 
-public class Ene: Character_Controller
+public class Ene: MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    Vector2 pos, scale;
+    private void Start()
     {
-        Debug.Log("ƒvƒŒƒCƒ„[‚É“–‚½‚Á‚½");
-        MoveFlg = true;
-        target = collision.gameObject.name;
-        Attack();
+        pos = transform.position;
+        scale = transform.localScale;
     }
+    private void Update()
+    {
+        if (scale.y > 0)
+        {
+            pos.y -= Time.deltaTime;
+            scale.y -= Time.deltaTime;
+            transform.position = pos;
+            transform.localScale = scale;
+
+        }
+    }
+
 }

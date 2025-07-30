@@ -16,7 +16,7 @@ public class C1: Character_Controller
         controller.Damage(attackPower);
 
         //DieŠÖ”ŒÄ‚Ño‚µ
-        Die();
+        //Die();
     }
 
   

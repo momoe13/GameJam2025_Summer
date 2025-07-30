@@ -14,6 +14,7 @@ public class Character_Controller : MonoBehaviour
     protected string            target;//攻撃するオブジェクト
 
 
+    Vector2 pos, scale;
     [SerializeField]
     protected bool MoveFlg = false;
 
@@ -55,11 +56,22 @@ public class Character_Controller : MonoBehaviour
     }
     protected virtual void Die()
     {
-        Destroy(this.gameObject);
+        if (scale.y > 0)
+        {
+            pos.y -= Time.deltaTime;
+            scale.y -= Time.deltaTime;
+            transform.position = pos;
+            transform.localScale = scale;
+
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("あああ");
+        if (collision == null) return;
         MoveFlg = true;
         target = collision.gameObject.name;
         Debug.Log(target);

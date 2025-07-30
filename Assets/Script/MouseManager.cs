@@ -14,34 +14,35 @@ public class MouseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0))
-        {
+        //if (Input.GetMouseButtonDown(0))
+        //{
 
-            //レイを使ってマウスの位置を見る
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //Rayの長さ
-            float maxDistance = 1;
+        //    //レイを使ってマウスの位置を見る
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    //Rayの長さ
+        //    float maxDistance = 1;
 
-            RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction, maxDistance);
+        //    RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction, maxDistance);
 
-            //なにかと衝突した時だけそのオブジェクトの名前をログに出す
-            if (hit.collider.CompareTag("ItemBox"))
-            {
-                Debug.Log(hit.collider.gameObject.name);
-            }
+        //    //なにかと衝突した時だけそのオブジェクトの名前をログに出す
+        //    if (hit.collider.CompareTag("ItemBox"))
+        //    {
 
-            
-
+        //        Debug.Log(hit.collider.gameObject.name);
+        //    }
 
 
+        //////TODO: 2消す
+        //    Debug.DrawRay(ray.origin, ray.direction * 1, Color.red, 5.0f); // 長さ３０、赤色で５秒間可視化
 
+        //}
 
-            //TODO:2消す
-            Debug.DrawRay(ray.origin, ray.direction * 1, Color.red, 5.0f); // 長さ３０、赤色で５秒間可視化
+        //if(Input.GetMouseButtonDown(0))
+        //{
 
-        }
+        //}
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
         }
     }

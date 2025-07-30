@@ -4,8 +4,9 @@ public class CreateManager : MonoBehaviour
 {
     int[] CreateNum = new int [2];
 
-    [SerializeField]//生成オブジェクト
-   // GameObject[] CreatePrefabs;
+    // GameObject[] CreatePrefabs;    //生成オブジェクト
+
+
     GenerationManager manager;
     
 
@@ -27,6 +28,7 @@ public class CreateManager : MonoBehaviour
             int Item = CreateNum[0] * 10 + CreateNum[1];
             //生成できるキャラか探す
             manager.SetNum(Item);
+            //選択初期化
             for (int i = 0; i < CreateNum.Length; i++) { CreateNum[i] = 0; }
         }
     }

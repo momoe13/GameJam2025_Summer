@@ -7,7 +7,7 @@ public class ItemButton : MonoBehaviour
 
     private void Start()
     {
-        manager = GameObject.Find("CreateButton").GetComponent<CreateManager>();
+        manager = GameObject.Find("Createmanager").GetComponent<CreateManager>();
     }
     public void GetButton()
     {
