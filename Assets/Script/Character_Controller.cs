@@ -1,30 +1,35 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character_Controller : MonoBehaviour
 {
-    [SerializeField] int character_id;//¯•Êq
-    int target_direction;             //is•ûŒü
+    [SerializeField] int character_id;//ï¿½ï¿½ï¿½Êq
+    int target_direction;             //ï¿½iï¿½sï¿½ï¿½ï¿½ï¿½
 
-    [SerializeField] float      speed;//ˆÚ“®‘¬“x
-    [SerializeField] float          hp;//‘Ì—Í
+    [SerializeField] float      speed;//ï¿½Ú“ï¿½ï¿½ï¿½ï¿½x
+    [SerializeField] float          hp;//ï¿½Ì—ï¿½
 
-    [SerializeField] float attack_Timing;//UŒ‚ƒ^ƒCƒ~ƒ“ƒO
-    float                   attack_Time;//UŒ‚‚Ü‚Å‚ÌƒJƒEƒ“ƒgƒ_ƒEƒ“—pƒ^ƒCƒ€
-    protected string            target;//UŒ‚‚·‚éƒIƒuƒWƒFƒNƒg
+    [SerializeField] float attack_Timing;//ï¿½Uï¿½ï¿½ï¿½^ï¿½Cï¿½~ï¿½ï¿½ï¿½O
+    float                   attack_Time;//ï¿½Uï¿½ï¿½ï¿½Ü‚Å‚ÌƒJï¿½Eï¿½ï¿½ï¿½gï¿½_ï¿½Eï¿½ï¿½ï¿½pï¿½^ï¿½Cï¿½ï¿½
+    protected string            target;//ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½g
+    [SerializeField] GameObject DamagePre;
+    [SerializeField] Canvas     DamageCanvas;
 
 
     Vector2 pos, scale;
     [SerializeField]
+
     protected bool MoveFlg = false;
 
     private void Start()
     {
-        //ƒvƒŒƒCƒ„[ƒLƒƒƒ‰‚Ìê‡‰E‚É“®‚­
+        //ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½Eï¿½É“ï¿½ï¿½ï¿½
         if (character_id == 0) { target_direction = 1; }
-        //“G‚Í¶‚ÉŒü‚©‚Á‚Ä“®‚­
+        //ï¿½Gï¿½Íï¿½ï¿½ÉŒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä“ï¿½ï¿½ï¿½
         else { target_direction = -1; }
-    }
+
+     }
 
     private void Update()
     {
@@ -44,16 +49,30 @@ public class Character_Controller : MonoBehaviour
 
     protected virtual void Attack()
     {
-        //Debug.Log("ãˆÊŒÄ‚Ño‚µ");
+        //Debug.Log("ï¿½ï¿½ÊŒÄ‚Ñoï¿½ï¿½");
        if(attack_Time < attack_Timing)return;
 
     }
     public void Damage(int dm)
     {
-        Debug.Log("UŒ‚‚³‚ê‚½I"+this.gameObject.name);
+        Debug.Log("ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½I"+this.gameObject.name);
         hp -= dm;
-        Die();
+        DamageTxt(dm);
+        if (hp <= 0) { Die(); }
     }
+    private void DamageTxt(int dm)
+    {
+        //ï¿½Ê’uï¿½İ’ï¿½
+        Vector2 pos = new Vector2(Random.Range(transform.position.x-1,transform.position.x+1), 
+            Random.Range(transform.position.y - 1, transform.position.y + 1));
+
+        //TODO:03ï¿½@ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½
+        //ï¿½eï¿½Lï¿½Xï¿½gï¿½Ìï¿½ï¿½ï¿½
+        Text damageIns = Instantiate(DamagePre, pos, Quaternion.identity, DamageCanvas.transform).GetComponent<Text>();
+        //ï¿½eï¿½Lï¿½Xï¿½gï¿½Ì’lï¿½ï¿½ÏX
+        damageIns.text = dm.ToString();
+    }
+
     protected virtual void Die()
     {
         if (scale.y > 0)
