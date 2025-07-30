@@ -12,7 +12,7 @@ public class ite : MonoBehaviour
     private void 　Update()
     {
         //マウスの位置を取得
-        MousePos = Input.mousePosition;
+        MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //自分の位置を反映
         transform.position = MousePos;   
     }
