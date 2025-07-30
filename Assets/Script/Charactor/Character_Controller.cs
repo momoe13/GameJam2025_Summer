@@ -18,7 +18,10 @@ public class Character_Controller : MonoBehaviour
     [SerializeField]
     float                   attack_Time;//攻撃までのカウントダウン用タイム
 
+    [Header("攻撃対象")]
     [SerializeField]
+    string                  TargetTag;
+    
     protected string            target;//攻撃するオブジェクト
     bool targetFlg = true;
 
@@ -66,7 +69,24 @@ public class Character_Controller : MonoBehaviour
 
         }
 
- 
+        //Rayを配列にして当たったもの全て出す
+        RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, new Vector2(target_direction,0), 2.0f);//中心点、方向、長さ
+        Debug.DrawRay(transform.position, new Vector2(target_direction*2, 0), Color.red, 1.0f); // 長さ2、赤色で1秒間可視化
+                                                                                                // Debug.Log(hit.collider.tag);
+
+        for (int i = 0; i < hit.Length; i++)
+        {
+            if (hit[i].collider.CompareTag(TargetTag))
+            {
+                target = hit[i].collider.gameObject.name;
+                Debug.Log(target);
+                MoveFlg = true;
+
+                if (target == null) { return; }
+                Attack();
+            }
+        }
+        
     }
 
     protected virtual void Move()
@@ -92,8 +112,6 @@ public class Character_Controller : MonoBehaviour
         Debug.Log("攻撃！");
         //Damege関数呼び出し
         controller.Damage(attackPower);
-       
-
     }
 
     public void Damage(int dm)
@@ -140,13 +158,13 @@ public class Character_Controller : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if( Vector3.Distance(transform.position,collision.transform.position) <= circleCollider.radius * 0.9f) MoveFlg = true;
-        target = collision.gameObject.name;
-        Attack();
-        Debug.Log("Wait");
-    }
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if( Vector3.Distance(transform.position,collision.transform.position) <= circleCollider.radius * 0.9f) MoveFlg = true;
+    //    target = collision.gameObject.name;
+    //    //Attack();
+    //    Debug.Log("Wait");
+    //}
     private void OnTriggerExit2D(Collider2D collision)
     {
         MoveFlg = false;

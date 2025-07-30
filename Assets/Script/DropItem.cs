@@ -25,6 +25,9 @@ public class DropItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        MoveFlg = true;
+        if(collision.gameObject.name== "MouseManager")
+        {
+            MoveFlg = true;
+        }
     }
 }

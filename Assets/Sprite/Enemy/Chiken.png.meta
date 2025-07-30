@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Chiken_0: 6779670330650163866
+      Chiken_1: -1310524014006580575
+      Chiken_2: -7698558699326602392
+      Chiken_3: 1912012244928036553
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

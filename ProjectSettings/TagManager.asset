@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ItemBox
   - DropItem
+  - Enemy
   layers:
   - Default
   - TransparentFX

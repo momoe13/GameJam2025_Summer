@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3092308282163252871}
   m_Layer: 0
   m_Name: PL
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,8 +170,9 @@ MonoBehaviour:
   hp: 1
   attack_Timing: 0
   attack_Time: 0
+  TargetTag: 
+  attackPower: 1
   DamagePre: {fileID: 4028270255119797780, guid: b62c2186e4809a74ab7dd1a4c59c8030, type: 3}
   DamageCanvas: {fileID: 462907297115423160, guid: 3a35e58741c54f84a9b1ba1e9b792e36, type: 3}
   MoveFlg: 0
   DropItem: {fileID: 0}
-  attackPower: 1

@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 0c93968f3864ab14a9cafba514b8c619
+guid: 3ed31690a5f0daf47ade242b699d66ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6279409994561399586
-    second: bigtree_0
+      213: 712035800519618848
+    second: Sword_0
   - first:
-      213: 3765125946575581012
-    second: bigtree_1
+      213: 1497478763720940017
+    second: Sword_1
   - first:
-      213: 2909399839282914834
-    second: bigtree_2
+      213: -3664594969507694454
+    second: Sword_2
   - first:
-      213: 5295692944836005905
-    second: bigtree_3
+      213: -4326360533754234484
+    second: Sword_3
+  - first:
+      213: -2400559193241486504
+    second: Sword_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,10 +84,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,19 +122,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -148,89 +138,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bigtree_0
+      name: Sword_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
-        width: 772
-        height: 775
+        y: 0
+        width: 725
+        height: 800
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 106, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed4512331ed0bd8a0800000000000000
-      internalID: -6279409994561399586
+      spriteID: 021355db9c8a1e900800000000000000
+      internalID: 712035800519618848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bigtree_1
+      name: Sword_1
       rect:
         serializedVersion: 2
         x: 795
-        y: 13
-        width: 784
-        height: 773
+        y: 0
+        width: 725
+        height: 800
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 53, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45f6e34991a604430800000000000000
-      internalID: 3765125946575581012
+      spriteID: 1f9174a600d18c410800000000000000
+      internalID: 1497478763720940017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bigtree_2
+      name: Sword_2
       rect:
         serializedVersion: 2
-        x: 1602
-        y: 12
-        width: 790
-        height: 776
+        x: 1650
+        y: 0
+        width: 725
+        height: 800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 216690a3db3406820800000000000000
-      internalID: 2909399839282914834
+      spriteID: a887fc48a4eb42dc0800000000000000
+      internalID: -3664594969507694454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bigtree_3
+      name: Sword_3
       rect:
         serializedVersion: 2
-        x: 2415
-        y: 2
-        width: 785
-        height: 796
+        x: 2475
+        y: 0
+        width: 725
+        height: 800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1101e70fca41e7940800000000000000
-      internalID: 5295692944836005905
+      spriteID: c893f4f340ea5f3c0800000000000000
+      internalID: -4326360533754234484
       vertices: []
       indices: 
       edges: []
@@ -239,7 +229,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ab6fe2e6947c66740ba2174e8004d4cb
     internalID: 0
     vertices: []
     indices: 
@@ -249,10 +239,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bigtree_0: -6279409994561399586
-      bigtree_1: 3765125946575581012
-      bigtree_2: 2909399839282914834
-      bigtree_3: 5295692944836005905
+      Sword_0: 712035800519618848
+      Sword_1: 1497478763720940017
+      Sword_2: -3664594969507694454
+      Sword_3: -4326360533754234484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

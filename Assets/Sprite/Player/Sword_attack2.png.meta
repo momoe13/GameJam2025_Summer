@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 0c93968f3864ab14a9cafba514b8c619
+guid: 2d3fa657c46aae94dafd83724eaf4cfe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6279409994561399586
-    second: bigtree_0
+      213: -4807785610755720371
+    second: Sword_attack2_0
   - first:
-      213: 3765125946575581012
-    second: bigtree_1
+      213: -4952554398531003054
+    second: Sword_attack2_1
   - first:
-      213: 2909399839282914834
-    second: bigtree_2
+      213: -430437861515677800
+    second: Sword_attack2_2
   - first:
-      213: 5295692944836005905
-    second: bigtree_3
+      213: 3095289309201893073
+    second: Sword_attack2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,19 +119,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -148,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bigtree_0
+      name: Sword_attack2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
-        width: 772
-        height: 775
+        y: 18
+        width: 455
+        height: 763
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,64 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed4512331ed0bd8a0800000000000000
-      internalID: -6279409994561399586
+      spriteID: d4bbba2b570574db0800000000000000
+      internalID: -4807785610755720371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bigtree_1
+      name: Sword_attack2_1
       rect:
         serializedVersion: 2
-        x: 795
-        y: 13
-        width: 784
-        height: 773
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45f6e34991a604430800000000000000
-      internalID: 3765125946575581012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bigtree_2
-      rect:
-        serializedVersion: 2
-        x: 1602
-        y: 12
-        width: 790
-        height: 776
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 216690a3db3406820800000000000000
-      internalID: 2909399839282914834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bigtree_3
-      rect:
-        serializedVersion: 2
-        x: 2415
+        x: 718
         y: 2
-        width: 785
-        height: 796
+        width: 487
+        height: 795
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +172,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1101e70fca41e7940800000000000000
-      internalID: 5295692944836005905
+      spriteID: 25dd2c8a30ef44bb0800000000000000
+      internalID: -4952554398531003054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_attack2_2
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 34
+        width: 745
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89faa76ab07c60af0800000000000000
+      internalID: -430437861515677800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_attack2_3
+      rect:
+        serializedVersion: 2
+        x: 2476
+        y: 61
+        width: 724
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d60b082a3da4fa20800000000000000
+      internalID: 3095289309201893073
       vertices: []
       indices: 
       edges: []
@@ -248,11 +235,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      bigtree_0: -6279409994561399586
-      bigtree_1: 3765125946575581012
-      bigtree_2: 2909399839282914834
-      bigtree_3: 5295692944836005905
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

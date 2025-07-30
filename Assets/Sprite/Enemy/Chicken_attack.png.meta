@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Chicken_attack_0: -5297728005652751377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
