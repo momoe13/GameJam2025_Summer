@@ -13,12 +13,13 @@ public class Character_Controller : MonoBehaviour
     [SerializeField] float attack_Timing;//�U���^�C�~���O
     float                   attack_Time;//�U���܂ł̃J�E���g�_�E���p�^�C��
     protected string            target;//�U������I�u�W�F�N�g
+
     [SerializeField] GameObject DamagePre;
     [SerializeField] Canvas     DamageCanvas;
 
 
-    Vector2 pos, scale;
-    [SerializeField]
+
+   [SerializeField]
 
     protected bool MoveFlg = false;
 
@@ -62,6 +63,7 @@ public class Character_Controller : MonoBehaviour
     }
     private void DamageTxt(int dm)
     {
+
         //�ʒu�ݒ�
         Vector2 pos = new Vector2(Random.Range(transform.position.x-1,transform.position.x+1), 
             Random.Range(transform.position.y - 1, transform.position.y + 1));
