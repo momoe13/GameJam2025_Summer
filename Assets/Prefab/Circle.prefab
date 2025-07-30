@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 6083142594914650525}
   - component: {fileID: 976480586955998467}
 
+
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -91,8 +92,10 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 
 --- !u!4 &2400482932817043994
+
 
 Transform:
   m_ObjectHideFlags: 0
@@ -100,7 +103,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 
+
   m_GameObject: {fileID: 5217388492349393465}
+
 
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}

@@ -623,6 +623,7 @@ MonoBehaviour:
   DamagePre: {fileID: 0}
   DamageCanvas: {fileID: 0}
 
+
   MoveFlg: 0
   attackPower: 0
 --- !u!212 &340516504

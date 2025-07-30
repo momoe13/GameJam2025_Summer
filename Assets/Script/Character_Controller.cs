@@ -10,19 +10,17 @@ public class Character_Controller : MonoBehaviour
     [SerializeField] float      speed;//�ړ����x
     [SerializeField] float          hp;//�̗�
 
-    [SerializeField] float attack_Timing;//�U���^�C�~���O
-    float                   attack_Time;//�U���܂ł̃J�E���g�_�E���p�^�C��
-    protected string            target;//�U������I�u�W�F�N�g
+    [SerializeField] float attack_Timing;//攻撃タイミング
+    float                   attack_Time;//攻撃までのカウントダウン用タイム
+    protected string            target;//攻撃するオブジェクト
 
     [SerializeField] GameObject DamagePre;
     [SerializeField] Canvas     DamageCanvas;
 
-
-
-   [SerializeField]
-
+    [SerializeField]
     protected bool MoveFlg = false;
 
+    Vector2 pos, scale;
     private void Start()
     {
         //�v���C���[�L�����̏ꍇ�E�ɓ���
@@ -56,23 +54,9 @@ public class Character_Controller : MonoBehaviour
     }
     public void Damage(int dm)
     {
-        Debug.Log("�U�����ꂽ�I"+this.gameObject.name);
+        Debug.Log("攻撃された！"+this.gameObject.name);
         hp -= dm;
-        DamageTxt(dm);
-        if (hp <= 0) { Die(); }
-    }
-    private void DamageTxt(int dm)
-    {
-
-        //�ʒu�ݒ�
-        Vector2 pos = new Vector2(Random.Range(transform.position.x-1,transform.position.x+1), 
-            Random.Range(transform.position.y - 1, transform.position.y + 1));
-
-        //TODO:03�@��x������������Ȃ�
-        //�e�L�X�g�̐���
-        Text damageIns = Instantiate(DamagePre, pos, Quaternion.identity, DamageCanvas.transform).GetComponent<Text>();
-        //�e�L�X�g�̒l��ύX
-        damageIns.text = dm.ToString();
+        Die();
     }
 
     protected virtual void Die()
