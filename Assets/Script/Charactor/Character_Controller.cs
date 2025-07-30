@@ -29,7 +29,7 @@ public class Character_Controller : MonoBehaviour
 
     [Header ("ダメージUI用Prefab")]
     [SerializeField] GameObject DamagePre;
-    [SerializeField] Canvas     DamageCanvas;
+    Canvas     DamageCanvas;
 
     [SerializeField]
     protected bool MoveFlg = false;
@@ -39,7 +39,10 @@ public class Character_Controller : MonoBehaviour
     Vector2 pos, scale;//死亡モーション用。
     bool DieFlg = false;//死亡判定
 
-    CircleCollider2D circleCollider;
+    BoxCollider2D boxCollider;
+
+    [Header("アニメーター")]
+    [SerializeField] Animator anim;
 
     [Header("ドロップアイテム")]
     [SerializeField]
@@ -55,7 +58,8 @@ public class Character_Controller : MonoBehaviour
 
         scale= transform.localScale;
         DamageCanvas = GameObject.Find("DamageCanvas").GetComponent<Canvas>();
-        circleCollider = GetComponent<CircleCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        anim.SetBool("AttackFlg", false);
     }
 
     private void Update()
@@ -69,45 +73,43 @@ public class Character_Controller : MonoBehaviour
 
         }
 
-        //Rayを配列にして当たったもの全て出す
-        RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, new Vector2(target_direction,0), 2.0f);//中心点、方向、長さ
-        Debug.DrawRay(transform.position, new Vector2(target_direction*2, 0), Color.red, 1.0f); // 長さ2、赤色で1秒間可視化
-                                                                                                // Debug.Log(hit.collider.tag);
+        ////Rayを配列にして当たったもの全て出す
+        //RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, new Vector2(target_direction,0), 2.0f);//中心点、方向、長さ
+        //Debug.DrawRay(transform.position, new Vector2(target_direction*2, 0), Color.red, 1.0f); // 長さ2、赤色で1秒間可視化
+        //                                                                                        // Debug.Log(hit.collider.tag);
 
-        for (int i = 0; i < hit.Length; i++)
-        {
-            if (hit[i].collider.CompareTag(TargetTag))
-            {
-                target = hit[i].collider.gameObject.name;
-                Debug.Log(target);
-                MoveFlg = true;
+        //for (int i = 0; i < hit.Length; i++)
+        //{
+        //    if (hit[i].collider.CompareTag(TargetTag))
+        //    {
+        //        target = hit[i].collider.gameObject.name;
+        //        Debug.Log(target);
+        //        MoveFlg = true;
 
-                if (target == null) { return; }
-                Attack();
-            }
-        }
+        //        if (target == null) { return; }
+        //        Attack();
+        //    }
+        //}
         
     }
 
     protected virtual void Move()
     {
-        if(MoveFlg) return;
+        if (MoveFlg)
+        {
+            Attack();
+            return;
+        }
         Vector2 pos = transform.position;
-        transform.position = new Vector2(pos.x+(speed * target_direction) , pos.y);
+        transform.position = new Vector2(pos.x+(speed * target_direction*Time.deltaTime) , pos.y);
 
     }
 
     protected virtual void Attack()
     {
-        Debug.Log(string.Format( "{0}/{1}", attack_Time,attack_Timing));
+        //Debug.Log(string.Format( "{0}/{1}", attack_Time,attack_Timing));
         if (attack_Time < attack_Timing){ return; }
-
-        //ターゲット名からターゲットとそのスクリプトを取得
-        if (targetFlg)
-        {
-            controller = GameObject.Find(target).GetComponent<Character_Controller>();
-            targetFlg = false;
-        }
+        anim.SetBool("AttackFlg", true);
         attack_Time = 0.0f;
         Debug.Log("攻撃！");
         //Damege関数呼び出し
@@ -158,17 +160,24 @@ public class Character_Controller : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if( Vector3.Distance(transform.position,collision.transform.position) <= circleCollider.radius * 0.9f) MoveFlg = true;
-    //    target = collision.gameObject.name;
-    //    //Attack();
-    //    Debug.Log("Wait");
-    //}
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("DropItem")) { return; }
+        if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x * 0.5f)
+        {
+            MoveFlg = true;
+            //ターゲット名からターゲットとそのスクリプトを取得
+            controller = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+
+            return;
+        }
+
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.CompareTag(this.tag)) { return; }
         MoveFlg = false;
-        target = null;
-        Debug.Log("ばいばい");
+        anim.SetBool("AttackFlg", false);
+        //controller = null;
     }
 }
