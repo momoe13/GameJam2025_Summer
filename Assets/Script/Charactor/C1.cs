@@ -9,7 +9,7 @@ public class C1: Character_Controller
 
     protected override void Attack()
     {
-        //Debug.Log("攻撃！");
+        Debug.Log("攻撃！");
         //ターゲット名からターゲットとそのスクリプトを取得
         if(targetFlg)
         {

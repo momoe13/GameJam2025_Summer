@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6357518e492770146b19aaaa0a40e29a
+guid: f0194c06c86e8c642b897c7291b002ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 800683605072732558
-    second: 2bird_enemy_0
+      213: 6779670330650163866
+    second: Chiken_0
   - first:
-      213: -7862591610973394800
-    second: 2bird_enemy_1
+      213: -1310524014006580575
+    second: Chiken_1
   - first:
-      213: -5153872129766417711
-    second: 2bird_enemy_2
+      213: -7698558699326602392
+    second: Chiken_2
   - first:
-      213: 8523413464246178609
-    second: 2bird_enemy_3
+      213: 1912012244928036553
+    second: Chiken_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,10 +81,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,6 +119,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,12 +148,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2bird_enemy_0
+      name: Chiken_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 53
-        width: 611
+        x: 0
+        y: 46
+        width: 610
         height: 746
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,17 +163,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e81e6d12f799c1b00800000000000000
-      internalID: 800683605072732558
+      spriteID: a9a78a8de3a361e50800000000000000
+      internalID: 6779670330650163866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2bird_enemy_1
+      name: Chiken_1
       rect:
         serializedVersion: 2
-        x: 759
+        x: 761
         y: 31
         width: 704
         height: 737
@@ -172,19 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 098e6fd669672e290800000000000000
-      internalID: -7862591610973394800
+      spriteID: 1aac48b4a5510dde0800000000000000
+      internalID: -1310524014006580575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2bird_enemy_2
+      name: Chiken_2
       rect:
         serializedVersion: 2
-        x: 1614
-        y: 59
-        width: 737
+        x: 1616
+        y: 52
+        width: 730
         height: 734
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1da9c77ba94c978b0800000000000000
-      internalID: -5153872129766417711
+      spriteID: 8630524d6a9392590800000000000000
+      internalID: -7698558699326602392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2bird_enemy_3
+      name: Chiken_3
       rect:
         serializedVersion: 2
         x: 2497
@@ -216,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 133dc22036f394670800000000000000
-      internalID: 8523413464246178609
+      spriteID: 9cef129a105d88a10800000000000000
+      internalID: 1912012244928036553
       vertices: []
       indices: 
       edges: []
@@ -235,11 +248,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      2bird_enemy_0: 800683605072732558
-      2bird_enemy_1: -7862591610973394800
-      2bird_enemy_2: -5153872129766417711
-      2bird_enemy_3: 8523413464246178609
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

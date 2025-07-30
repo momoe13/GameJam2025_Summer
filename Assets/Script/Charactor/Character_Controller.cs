@@ -13,6 +13,8 @@ public class Character_Controller : MonoBehaviour
     [SerializeField] float          hp;//�̗�
 
     [SerializeField] float attack_Timing;//攻撃タイミング
+
+    [SerializeField]
     float                   attack_Time;//攻撃までのカウントダウン用タイム
     protected string            target;//攻撃するオブジェクト
 
@@ -39,8 +41,8 @@ public class Character_Controller : MonoBehaviour
         else { target_direction = -1; }
 
         scale= transform.localScale;
-
-     }
+        DamageCanvas = GameObject.Find("DamageCanvas").GetComponent<Canvas>();
+    }
 
     private void Update()
     {
@@ -49,11 +51,8 @@ public class Character_Controller : MonoBehaviour
         else
         {
             Move();
-            attack_Time = Time.time;
-            if (target != null) { 
-                Attack(); 
-                attack_Time =0;
-            }
+            attack_Time += Time.time;
+
         }
 
  
@@ -70,14 +69,18 @@ public class Character_Controller : MonoBehaviour
     protected virtual void Attack()
     {
        if(attack_Time < attack_Timing)return;
-
+        attack_Time = 0;
+        
     }
     public void Damage(int dm)
     {
+        if (DieFlg) return ;
         hp -= dm;
-        if (hp >= 0) { return; }
-        DieFlg = true;  
         DamageTex(dm);
+        if (hp <= 0) { DieFlg = true; }
+ 
+ 
+        Debug.Log("ダメージ"+this.gameObject.name);
     }
     private void DamageTex(int dm)
     {
@@ -113,10 +116,15 @@ public class Character_Controller : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         MoveFlg = true;
         target = collision.gameObject.name;
         Attack();
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        MoveFlg = false;
+        target = null;
     }
 }
