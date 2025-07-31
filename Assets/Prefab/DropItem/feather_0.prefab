@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveFlg: 0
-  TargetPos: {x: -3.4, y: -2}
+  TargetPos: {x: -3.1, y: -4}
   speed: 0.05
 --- !u!61 &4919764876993866076
 BoxCollider2D:

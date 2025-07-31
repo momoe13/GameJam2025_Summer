@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveFlg: 0
-  TargetPos: {x: -6, y: -2}
+  TargetPos: {x: -5.3, y: -4}
   speed: 0.05
 --- !u!50 &2717747788112271521
 Rigidbody2D:

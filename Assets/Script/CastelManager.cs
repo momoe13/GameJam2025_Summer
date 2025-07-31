@@ -4,18 +4,22 @@ using UnityEngine;
 public class CastelManager : MonoBehaviour
 {
     [SerializeField] GameObject GameOver;
+    bool EndFlg=false;
   
-    public void GetCastel()
+    public void CastelDamage()
     {
-      
-            GameOver.SetActive(true);
-            Time.timeScale = 0.0f;
-            //タイトルに遷移
-            if (Input.GetMouseButtonDown(0))
-            {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("0_TitleScene");
-                Time.timeScale = 1.0f;
-            }
-
+        Debug.Log("城だよ～");
+        GameOver.SetActive(true);
+        Time.timeScale = 0.0f;
+        EndFlg = true;
+    }
+    private void Update()
+    {
+        //タイトルに遷移
+        if (EndFlg&& Input.GetMouseButtonDown(0))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("0_TitleScene");
+            Time.timeScale = 1.0f;
+        }
     }
 }

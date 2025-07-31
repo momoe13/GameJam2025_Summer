@@ -1,10 +1,5 @@
-using NUnit.Framework;
-using NUnit.Framework.Constraints;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
 
 public class Character_Controller : MonoBehaviour
@@ -17,17 +12,10 @@ public class Character_Controller : MonoBehaviour
     [SerializeField] float      speed;//�ړ����x
     [SerializeField] float          hp;//�̗�
 
-    [SerializeField] float attack_Timing;//クールタイム
+    [SerializeField] float coolTime;//クールタイム
 
-    [SerializeField]
     float                   attack_Time;//攻撃までのカウントダウン用タイム
-
-    [Header("攻撃対象")]
-    [SerializeField]
-    string                  TargetTag;
-    
     protected string            target;//攻撃するオブジェクト
-    bool targetFlg = true;
 
     [SerializeField] int attackPower;
 
@@ -37,6 +25,7 @@ public class Character_Controller : MonoBehaviour
 
     [SerializeField]
     protected bool isStop = false;
+    bool isCastel = false;
 
     public Character_Controller attackTarget;
 
@@ -113,9 +102,10 @@ public class Character_Controller : MonoBehaviour
     protected virtual void Attack()
     {
         //Debug.Log(string.Format( "{0}/{1}", attack_Time,attack_Timing));
-        if (attack_Time < attack_Timing){ return; }
+        if (attack_Time < coolTime){ return; }
         anim.SetBool("AttackFlg", true);
         attack_Time = 0.0f;
+        if (isCastel) { return; }
         //Damege関数呼び出し
         attackTarget.Damage(attackPower);
     }
@@ -170,12 +160,20 @@ public class Character_Controller : MonoBehaviour
         if (collision.CompareTag("DropItem")) { return; }
         //if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x / 2.0f)
         //{
-            if(collision.gameObject.name != ("Coll"))
-            {            //ターゲット名からターゲットとそのスクリプトを取得
-                attackTarget = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+        if (collision.gameObject.name == ("kyassuru_0"))
+        {
+            StartCoroutine("AttackWait");
 
-                StartCoroutine("MovingCancel");
-            }
+            isCastel = true;
+            CastelManager castel = GameObject.Find(collision.gameObject.name).GetComponent<CastelManager>();
+            castel.CastelDamage();
+        }
+        else if (collision.gameObject.name != ("Coll"))
+        {            //ターゲット名からターゲットとそのスクリプトを取得
+            attackTarget = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+
+            StartCoroutine("MovingCancel");
+        }
         //}
 
     }
@@ -190,13 +188,19 @@ public class Character_Controller : MonoBehaviour
     {
         //if (collision.CompareTag(this.tag)) { return; }
         StartCoroutine("MovingStart");
-        anim.SetBool("AttackFlg", false);
         //controller = null;
     }
 
     IEnumerator MovingStart()
     {
         yield return new WaitForSeconds(0.3f);
+        anim.SetBool("AttackFlg", false);
         isStop = false;
+
+    }
+    IEnumerator AttackWait()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isStop = true;
     }
 }

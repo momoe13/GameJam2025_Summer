@@ -16,6 +16,7 @@ public class DropItem : MonoBehaviour
         if(MoveFlg)
         {
             ItemMove();
+            if(transform.position.y <= TargetPos.y) {Destroy(gameObject); }
         }
     }
     private void ItemMove()
