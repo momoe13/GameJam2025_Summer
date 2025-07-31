@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -167,7 +168,8 @@ public class Character_Controller : MonoBehaviour
         }
         else if (collision.gameObject.tag == ("Target"))
         {            //ターゲット名からターゲットとそのスクリプトを取得
-            attackTarget = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+            //attackTarget = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+            attackTarget = collision.gameObject.GetComponentInParent<Character_Controller>();
             Debug.Log(collision.gameObject.name);
             StartCoroutine("MovingCancel");
         }

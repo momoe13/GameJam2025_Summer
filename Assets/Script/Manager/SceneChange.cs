@@ -9,7 +9,11 @@ public class SceneChange : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("0_TitleScene");
         Time.timeScale = 1.0f;
     }
-    
+    public static void MapLordScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("1_MapScene");
+        Time.timeScale = 1.0f;
+    }
     public static void GameLordScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("2_GameScene");
