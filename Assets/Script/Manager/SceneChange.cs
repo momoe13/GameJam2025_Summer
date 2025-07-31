@@ -25,4 +25,10 @@ public class SceneChange : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("2_ResultScene");
         Time.timeScale = 1.0f;
     }
+
+    public static void GameClearLoadScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("4_ClearScene");
+        Time.timeScale = 1.0f;
+    }
 }
