@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2930941509633222084}
   m_Layer: 6
   m_Name: Chiken_0
-  m_TagString: Enemy
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad1631f08c55fc46a75425787e9710b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character_id: 5
+  ally: 0
   speed: 0.5
   hp: 20
   coolTime: 0

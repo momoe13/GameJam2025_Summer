@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5341905559840789}
   - component: {fileID: 5959528319499202033}
   m_Layer: 0
-  m_Name: Missile
+  m_Name: Arrow_Missile
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -48,3 +48,4 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   throwingAngle: 46
   coolTime: 5
+  minDis: 10
