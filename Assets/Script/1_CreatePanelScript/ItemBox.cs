@@ -1,20 +1,21 @@
+using System.Linq;
 using UnityEngine;
 
 public class ItemBox : MonoBehaviour
 {
-    bool IsMouse;
-    private void Update()
-    {
-        //マウスの当たり判定がTrue
-        if(IsMouse)
-        {
-            //マウスの位置を追従する
-        }
+    ItemButton[] itemButtons;
 
+    private void Start()
+    {
+        itemButtons = GetComponentsInChildren<ItemButton>();
     }
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void AddItem(int itemID)
     {
-        
+        var targetButton = itemButtons.FirstOrDefault(s => s.ItemID == itemID);
+        if (targetButton == null)
+        {
+            return;
+        }
+        targetButton.AddItem();
     }
 }

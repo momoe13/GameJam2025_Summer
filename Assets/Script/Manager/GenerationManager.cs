@@ -11,17 +11,26 @@ public class GenerationManager : MonoBehaviour
     int maxEne=3;
     float gameTime= 0;
 
+    float BossTime = 30.0f;
+
     //敵キャラの生成数を保存する
     [SerializeField]
     List<GameObject> EnemyBox;
     int eneType = 0;
 
-
+    // TODO : ミサイルをとりあえず動かすための追加！！後で変えましょう
+    public IReadOnlyList<GameObject> ActiveEnemyList => EnemyBox;
+    
     private void Update()
     {
         if (GeneratFlg) PLGeneration();
         //ボスが出るまで更新する
-       // gameTime = Time.time;
+        gameTime = Time.deltaTime;
+        if (BossTime < gameTime)
+        {
+            //ボス生成
+            Instantiate(CreatePrefabs[5], this.transform.position, Quaternion.identity);
+        }
         
         for (int i = 0; i < EnemyBox.Count; i++)
         {
@@ -57,6 +66,19 @@ public class GenerationManager : MonoBehaviour
 
     public void SetNum(int num)
     {
+        //23,24,34
+        switch (num)
+        {
+            case 23:
+                num = 9;
+                break;
+            case 24:
+                num = 10;
+                break;
+            case 34:
+                num = 11;
+                break;
+        }
         Type = num;
         GeneratFlg = true;
     }

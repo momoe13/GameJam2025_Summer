@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 9ae35744a95fd6e47b194cc8b8205f88
+guid: 30ed7142778a3fe428d0be84f35a3945
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 427318244677728147
-    second: spearsoldier_0
+      213: -2290304652163139040
+    second: spearsoldier 1_0
   - first:
-      213: -8727645964695847052
-    second: spearsoldier_1
+      213: 6567059449157523200
+    second: spearsoldier 1_1
   - first:
-      213: 712050272498485337
-    second: spearsoldier_2
+      213: -5976504126952621584
+    second: spearsoldier 1_2
   - first:
-      213: 6689349424018170030
-    second: spearsoldier_3
-  - first:
-      213: -8834721308191454009
-    second: spearsoldier_4
+      213: -1131017315378153556
+    second: spearsoldier 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,19 +119,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -151,111 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spearsoldier_0
+      name: spearsoldier 1_0
       rect:
         serializedVersion: 2
-        x: 533
+        x: 0
         y: 0
-        width: 162
-        height: 346
+        width: 352
+        height: 763
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3973f04fda32ee500800000000000000
-      internalID: 427318244677728147
+      spriteID: 02a346cad043730e0800000000000000
+      internalID: -2290304652163139040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spearsoldier_1
+      name: spearsoldier 1_1
       rect:
         serializedVersion: 2
-        x: 690
-        y: 50
-        width: 6
-        height: 6
+        x: 939
+        y: 0
+        width: 464
+        height: 764
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47fbee47c3c21e680800000000000000
-      internalID: -8727645964695847052
+      spriteID: 00718e576c1e22b50800000000000000
+      internalID: 6567059449157523200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spearsoldier_2
+      name: spearsoldier 1_2
       rect:
         serializedVersion: 2
-        x: 1170
+        x: 1989
         y: 0
-        width: 214
-        height: 346
+        width: 290
+        height: 765
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9580e7243f5b1e900800000000000000
-      internalID: 712050272498485337
+      spriteID: 0f9355259213f0da0800000000000000
+      internalID: -5976504126952621584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spearsoldier_3
+      name: spearsoldier 1_3
       rect:
         serializedVersion: 2
-        x: 1887
+        x: 2866
         y: 0
-        width: 134
-        height: 347
+        width: 334
+        height: 767
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea021150cd755dc50800000000000000
-      internalID: 6689349424018170030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spearsoldier_4
-      rect:
-        serializedVersion: 2
-        x: 2514
-        y: 0
-        width: 154
-        height: 347
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7cc8caf47c3c46580800000000000000
-      internalID: -8834721308191454009
+      spriteID: ca7b11a7eb1dd40f0800000000000000
+      internalID: -1131017315378153556
       vertices: []
       indices: 
       edges: []
@@ -264,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7a584d0fa7731cb49a88ce7d6aae6b4a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -274,11 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spearsoldier_0: 427318244677728147
-      spearsoldier_1: -8727645964695847052
-      spearsoldier_2: 712050272498485337
-      spearsoldier_3: 6689349424018170030
-      spearsoldier_4: -8834721308191454009
+      spearsoldier 1_0: -2290304652163139040
+      spearsoldier 1_1: 6567059449157523200
+      spearsoldier 1_2: -5976504126952621584
+      spearsoldier 1_3: -1131017315378153556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

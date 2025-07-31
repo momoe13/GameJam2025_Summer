@@ -40,7 +40,7 @@ public class Character_Controller : MonoBehaviour
 
     [Header("ドロップアイテム")]
     [SerializeField]
-    GameObject DropItem;
+    GameObject[] DropItem;
 
 
     private void Start()
@@ -145,10 +145,13 @@ public class Character_Controller : MonoBehaviour
         }
         else
         {
-            if(DropItem != null)
+            if(DropItem[0] != null)
             {
-                //ドロップアイテム生成
-                Instantiate(DropItem, pos, Quaternion.identity);
+                for (int i = 0; i < DropItem.Length; i++)
+                {
+                    //ドロップアイテム生成
+                    Instantiate(DropItem[i], pos, Quaternion.identity);
+                }
             }
             Destroy(this.gameObject);
         }

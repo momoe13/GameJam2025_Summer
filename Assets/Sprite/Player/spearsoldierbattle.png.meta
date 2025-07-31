@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: 5389940077075097765
     second: spearsoldierbattle_1
+  - first:
+      213: 6892258932502023854
+    second: spearsoldierbattle_2
+  - first:
+      213: -6215143109593492756
+    second: spearsoldierbattle_3
+  - first:
+      213: 5364906763472149249
+    second: spearsoldierbattle_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 120
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,10 +84,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,19 +122,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -145,10 +141,10 @@ TextureImporter:
       name: spearsoldierbattle_0
       rect:
         serializedVersion: 2
-        x: 568
+        x: 510
         y: 0
-        width: 661
-        height: 660
+        width: 412
+        height: 297
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,10 +163,10 @@ TextureImporter:
       name: spearsoldierbattle_1
       rect:
         serializedVersion: 2
-        x: 1852
-        y: 0
-        width: 826
-        height: 617
+        x: 1407
+        y: 9
+        width: 378
+        height: 293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,6 +177,72 @@ TextureImporter:
       bones: []
       spriteID: 5a8e3b661f9ecca40800000000000000
       internalID: 5389940077075097765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spearsoldierbattle_2
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 130
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaecbcb7bf836af50800000000000000
+      internalID: 6892258932502023854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spearsoldierbattle_3
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 0
+        width: 400
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2967465406fb9a0800000000000000
+      internalID: -6215143109593492756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spearsoldierbattle_4
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 0
+        width: 129
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b19d1e64af37a40800000000000000
+      internalID: 5364906763472149249
       vertices: []
       indices: 
       edges: []
@@ -201,6 +263,9 @@ TextureImporter:
     nameFileIdTable:
       spearsoldierbattle_0: -1428880595684190460
       spearsoldierbattle_1: 5389940077075097765
+      spearsoldierbattle_2: 6892258932502023854
+      spearsoldierbattle_3: -6215143109593492756
+      spearsoldierbattle_4: 5364906763472149249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
