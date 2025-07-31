@@ -24,8 +24,12 @@ public class WeaponManager : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        controller = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
-        controller.Damage(attackPower);
-        Destroy(this.gameObject);
+        //替え
+        // controller = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+        if (collision.gameObject.TryGetComponent<Character_Controller>(out var controller))
+        {
+            controller.Damage(attackPower);
+            Destroy(this.gameObject);
+        }
     }
 }

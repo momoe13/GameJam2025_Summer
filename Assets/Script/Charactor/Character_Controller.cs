@@ -188,6 +188,7 @@ public class Character_Controller : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (!gameObject.activeInHierarchy) return;
         //if (collision.CompareTag(this.tag)) { return; }
         StartCoroutine("MovingStart");
         //controller = null;

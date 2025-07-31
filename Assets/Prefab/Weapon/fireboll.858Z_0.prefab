@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6492433831830973623}
   - component: {fileID: 8481316841347936857}
   - component: {fileID: 2308207417861066760}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fireboll.858Z_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
