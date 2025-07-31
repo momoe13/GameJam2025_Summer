@@ -248,7 +248,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BOSSgrandtree_battle_0: -5559654843211779854
+      BOSSgrandtree_battle_1: 801380847202675432
+      BOSSgrandtree_battle_2: 3454728564326342974
+      BOSSgrandtree_battle_3: -2045728078753596953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
