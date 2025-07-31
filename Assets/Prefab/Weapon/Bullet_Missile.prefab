@@ -47,5 +47,5 @@ MonoBehaviour:
   throwingObject: {fileID: 6579910121677037768, guid: 30d7c7cc0b6636741b59f4419235b9d3, type: 3}
   targetObject: {fileID: 0}
   throwingAngle: 20
-  coolTime: 5
-  minDis: 20
+  coolTime: 3
+  minDis: 30

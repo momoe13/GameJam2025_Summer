@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5849002568876261681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4447998290256716354}
+  - component: {fileID: 7730823515373526358}
+  m_Layer: 0
+  m_Name: GenerationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4447998290256716354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849002568876261681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5299997, y: -0.00999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7730823515373526358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849002568876261681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a6ee3f1ca862c4aa457a608e844c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CreatePrefabs:
+  - {fileID: 8378468594358431082, guid: 9b30e572656258c489671d178aec6f78, type: 3}
+  - {fileID: 8695807413007316508, guid: ba878537509cb97469bce302ed5dc3bc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 3167825287689010028, guid: 66a0b466d1eeaba4284fc1afc8d852a8, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8928599954345681731, guid: f4361b64cdf79bd4c9912747097ad120, type: 3}
+  - {fileID: 3439360921774120246, guid: 3918a84334694424a9dfcfcfae514f96, type: 3}
+  - {fileID: 7174197886173544326, guid: bda687da239cb5f4f95b1156650a3285, type: 3}
+  - {fileID: 2324361333881543856, guid: 89514e01c291f8541a9664964631bca2, type: 3}
+  - {fileID: 529809850003121232, guid: bf2590d0ce80a6b4e98f266800304523, type: 3}
+  - {fileID: 5037410948464708487, guid: cf22feaf7f804aa4e937e30775303dff, type: 3}
+  EnemyBox: []
+  bossTest: {fileID: 0}

@@ -41,7 +41,7 @@ public class GenerationManager : MonoBehaviour
         //ボスの生成
         if(!isBossGenerated)
         {
-            gameTime = Time.deltaTime;
+            gameTime += Time.deltaTime;
             if (BossTime < gameTime)
             {
                 //ボス生成

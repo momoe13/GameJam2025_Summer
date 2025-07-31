@@ -29,7 +29,8 @@ public class WeaponManager : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Character_Controller>(out var controller))
         {
             controller.Damage(attackPower);
-            Destroy(this.gameObject);
         }
+
+        Destroy(this.gameObject);
     }
 }

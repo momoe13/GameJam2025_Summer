@@ -18,7 +18,7 @@ public class CastelManager : MonoBehaviour
         //ƒ^ƒCƒgƒ‹‚É‘JˆÚ
         if (EndFlg&& Input.GetMouseButtonDown(0))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("0_TitleScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("1_MapScene");
             Time.timeScale = 1.0f;
         }
     }

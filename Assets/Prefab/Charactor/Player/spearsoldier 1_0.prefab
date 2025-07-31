@@ -186,12 +186,13 @@ MonoBehaviour:
   speed: 1
   hp: 3
   coolTime: 2
-  attackPower: 1
+  attackPower: 2
   DamagePre: {fileID: 4028270255119797780, guid: b62c2186e4809a74ab7dd1a4c59c8030, type: 3}
   isStop: 0
   attackTarget: {fileID: 0}
   anim: {fileID: 4407863440503571432}
-  DropItem: {fileID: 0}
+  DropItem:
+  - {fileID: 0}
 --- !u!95 &4407863440503571432
 Animator:
   serializedVersion: 7

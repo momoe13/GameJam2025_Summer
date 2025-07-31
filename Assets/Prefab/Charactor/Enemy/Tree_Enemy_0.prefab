@@ -234,7 +234,7 @@ MonoBehaviour:
   ally: 0
   speed: 1
   hp: 3
-  coolTime: 0
+  coolTime: 3
   attackPower: 1
   DamagePre: {fileID: 4028270255119797780, guid: b62c2186e4809a74ab7dd1a4c59c8030, type: 3}
   isStop: 0
@@ -273,7 +273,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

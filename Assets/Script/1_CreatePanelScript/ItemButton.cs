@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour
 {
@@ -15,15 +16,18 @@ public class ItemButton : MonoBehaviour
         set
         {
             _count = value;
+            thisButton.interactable = _count > 0;
             countText.text = $"Å~{_count}";
         }
     }
 
+    Button thisButton;
     TMP_Text countText;
 
     private void Start()
     {
         manager = GameObject.Find("CreateManager").GetComponent<CreateManager>();
+        thisButton = GetComponent<Button>();
         countText = GetComponentInChildren<TMP_Text>();
         Count = Count;
     }

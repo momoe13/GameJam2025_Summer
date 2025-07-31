@@ -43,19 +43,20 @@ public class Missile : MonoBehaviour
         //↓++++++++++++一番近い敵探し++++++++++++↓
         //  タグEnemyのオブジェクトをすべて取得し、10f以内の最も近いエネミーを取得する。
         targetObject = null;    //前回の攻撃で一番近かった敵をリセット
-        minDis = 10f;    //オートエイム範囲。お好みで。
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");//Enemyタグがついたオブジェクトをすべて配列に格納。
-        foreach (GameObject enemy in enemys)    //全Enemyオブジェクト入り配列をひとつづつループ。
+        float Min = minDis;    //オートエイム範囲。お好みで。
+        foreach (GameObject enemy in activeEnemyList)    //全Enemyオブジェクト入り配列をひとつづつループ。
         {
+            if (enemy == null) { continue; }
             //プレイヤーキャラとループ中の敵オブジェクトの距離を引き算して差を出す。
             float dis = Vector3.Distance(transform.position, enemy.transform.position);                
-            if (dis < minDis)    //オートエイム範囲(10f)以内か確認
+            if (dis < Min)    //オートエイム範囲(10f)以内か確認
             {
-                minDis = dis;    //今んとこ一番近い敵との距離更新。次のループ用。
+                Min = dis;    //今んとこ一番近い敵との距離更新。次のループ用。
                 targetObject = enemy;    //今んとこ一番近い敵オブジェクト更新。
-                ThrowBall();
+                
             }
         }
+        ThrowBall();
     }
   void ThrowBall()
   {
