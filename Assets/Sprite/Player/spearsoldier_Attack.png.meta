@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: eb6940cd0713ed24e9d2b90029780920
+guid: be0def084a141704c99488519c3042f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1428880595684190460
-    second: spearsoldierbattle_0
+      213: 2284197627185863718
+    second: spearsoldier_Attack_0
   - first:
-      213: 5389940077075097765
-    second: spearsoldierbattle_1
+      213: -183294962155037673
+    second: spearsoldier_Attack_1
+  - first:
+      213: -8499799569052620983
+    second: spearsoldier_Attack_2
+  - first:
+      213: 1417083324744954554
+    second: spearsoldier_Attack_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,19 +119,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spearsoldierbattle_0
+      name: spearsoldier_Attack_0
       rect:
         serializedVersion: 2
-        x: 568
+        x: 528
         y: 0
-        width: 661
-        height: 660
+        width: 371
+        height: 293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4079bc33ba89b2ce0800000000000000
-      internalID: -1428880595684190460
+      spriteID: 62c1435c3a913bf10800000000000000
+      internalID: 2284197627185863718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spearsoldierbattle_1
+      name: spearsoldier_Attack_1
       rect:
         serializedVersion: 2
-        x: 1852
-        y: 0
-        width: 826
-        height: 617
+        x: 910
+        y: 101
+        width: 25
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +172,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a8e3b661f9ecca40800000000000000
-      internalID: 5389940077075097765
+      spriteID: 71c51abf33ec47df0800000000000000
+      internalID: -183294962155037673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spearsoldier_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 0
+        width: 432
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947a9986355aa0a80800000000000000
+      internalID: -8499799569052620983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spearsoldier_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 0
+        width: 393
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab27d8c96cd7aa310800000000000000
+      internalID: 1417083324744954554
       vertices: []
       indices: 
       edges: []
@@ -198,9 +235,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      spearsoldierbattle_0: -1428880595684190460
-      spearsoldierbattle_1: 5389940077075097765
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

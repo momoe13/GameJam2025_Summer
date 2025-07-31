@@ -57,6 +57,18 @@ public class GenerationManager : MonoBehaviour
 
     public void SetNum(int num)
     {
+        //23,24,34
+        switch (num)
+        {
+            case 23:
+                num = 10;
+                break;
+            case 24:
+                num = 11;
+                break;
+            case 34:
+                break;
+        }
         Type = num;
         GeneratFlg = true;
     }

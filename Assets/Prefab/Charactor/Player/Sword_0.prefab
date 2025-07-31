@@ -185,7 +185,7 @@ MonoBehaviour:
   ally: 1
   speed: 1
   hp: 2
-  coolTime: 0
+  coolTime: 1
   attackPower: 5
   DamagePre: {fileID: 4028270255119797780, guid: b62c2186e4809a74ab7dd1a4c59c8030, type: 3}
   isStop: 0
