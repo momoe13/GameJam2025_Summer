@@ -111,7 +111,6 @@ public class Character_Controller : MonoBehaviour
         if (attack_Time < attack_Timing){ return; }
         anim.SetBool("AttackFlg", true);
         attack_Time = 0.0f;
-        Debug.Log("攻撃！");
         //Damege関数呼び出し
         controller.Damage(attackPower);
     }
@@ -163,13 +162,15 @@ public class Character_Controller : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("DropItem")) { return; }
-        if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x * 0.5f)
+        if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x * 0.3f)
         {
-            MoveFlg = true;
-            //ターゲット名からターゲットとそのスクリプトを取得
-            controller = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+            if(collision.gameObject.name != ("Coll"))
+            {            //ターゲット名からターゲットとそのスクリプトを取得
+                controller = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
+                Debug.Log(collision.gameObject.name);
+                MoveFlg = true;
+            }
 
-            return;
         }
 
     }

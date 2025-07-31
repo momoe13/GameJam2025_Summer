@@ -10,10 +10,18 @@ public class Missile : MonoBehaviour
   [SerializeField] GameObject targetObject;
   [SerializeField, Range(0f, 90f)] float throwingAngle;
 
-  void Update()
+    [SerializeField] float coolTime;
+    float timer = 0;
+
+    void Update()
   {
-      if (Input.GetMouseButtonDown(0)) ThrowBall();
-  }
+      timer += Time.deltaTime;
+        if (timer > coolTime)
+        {
+            ThrowBall();
+            timer = 0;
+        }
+    }
 
   void ThrowBall()
   {
@@ -22,7 +30,11 @@ public class Missile : MonoBehaviour
       Vector2 start = transform.position;
       Vector2 target = targetObject.transform.position;
       Vector2 vel = CalculateVelocity2D(start, target, throwingAngle);
-      Rigidbody2D rb2d = ball.GetComponent<Rigidbody2D>();
+
+      float angle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
+        ball.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); // Zé≤âÒì]Åi2DÅj
+
+        Rigidbody2D rb2d = ball.GetComponent<Rigidbody2D>();
       rb2d.AddForce(vel * rb2d.mass, ForceMode2D.Impulse);
   }
 
