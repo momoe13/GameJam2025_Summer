@@ -232,12 +232,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character_id: 3
-  speed: 0.005
+  speed: 1
   hp: 3
-  attack_Timing: 0
+  attack_Timing: 3
   attack_Time: 0
   TargetTag: Player
-  attackPower: 0
+  attackPower: 2
   DamagePre: {fileID: 4028270255119797780, guid: b62c2186e4809a74ab7dd1a4c59c8030, type: 3}
   MoveFlg: 0
   anim: {fileID: 7946203092498034421}

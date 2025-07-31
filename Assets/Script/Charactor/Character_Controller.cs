@@ -161,13 +161,14 @@ public class Character_Controller : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("DropItem")) { return; }
+ 
+        if (collision.CompareTag("DropItem")) { return; }
         if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x * 0.3f)
         {
             if(collision.gameObject.name != ("Coll"))
             {            //ターゲット名からターゲットとそのスクリプトを取得
                 controller = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
-                Debug.Log(collision.gameObject.name);
+ 
                 MoveFlg = true;
             }
 
