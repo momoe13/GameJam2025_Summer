@@ -38,7 +38,7 @@ public class Missile : MonoBehaviour
         //  タグEnemyのオブジェクトをすべて取得し、10f以内の最も近いエネミーを取得する。
         targetObject = null;    //前回の攻撃で一番近かった敵をリセット
         minDis = 10f;    //オートエイム範囲。お好みで。
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Target");//Enemyタグがついたオブジェクトをすべて配列に格納。
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");//Enemyタグがついたオブジェクトをすべて配列に格納。
         foreach (GameObject enemy in enemys)    //全Enemyオブジェクト入り配列をひとつづつループ。
         {
             //プレイヤーキャラとループ中の敵オブジェクトの距離を引き算して差を出す。
