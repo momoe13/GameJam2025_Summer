@@ -109,7 +109,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.26, y: 2.19, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 608000168961938593}
@@ -211,8 +211,10 @@ MonoBehaviour:
   attack_Time: 0
   TargetTag: 
   attackPower: 0
-  DamagePre: {fileID: 4028270255119797780, guid: b62c2186e4809a74ab7dd1a4c59c8030, type: 3}
-  MoveFlg: 0
+
+  DamagePre: {fileID: 0}
+  isStop: 0
+  attackTarget: {fileID: 0}
   anim: {fileID: 111694003382832052}
   DropItem: {fileID: 5968803913284971615, guid: 28bf1935f9557f048bbdcf0b4f1206b8, type: 3}
 --- !u!50 &7584539195635770817

@@ -1,4 +1,8 @@
+using NUnit.Framework;
+using NUnit.Framework.Constraints;
+using System.Collections;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.UI;
@@ -32,9 +36,9 @@ public class Character_Controller : MonoBehaviour
     Canvas     DamageCanvas;
 
     [SerializeField]
-    protected bool MoveFlg = false;
+    protected bool isStop = false;
 
-    Character_Controller controller;
+    public Character_Controller attackTarget;
 
     Vector2 pos, scale;//死亡モーション用。
     bool DieFlg = false;//死亡判定
@@ -95,11 +99,12 @@ public class Character_Controller : MonoBehaviour
 
     protected virtual void Move()
     {
-        if (MoveFlg)
+        if (isStop)
         {
             Attack();
             return;
         }
+
         Vector2 pos = transform.position;
         transform.position = new Vector2(pos.x+(speed * target_direction*Time.deltaTime) , pos.y);
 
@@ -112,7 +117,7 @@ public class Character_Controller : MonoBehaviour
         anim.SetBool("AttackFlg", true);
         attack_Time = 0.0f;
         //Damege関数呼び出し
-        controller.Damage(attackPower);
+        attackTarget.Damage(attackPower);
     }
 
     public void Damage(int dm)
@@ -163,23 +168,35 @@ public class Character_Controller : MonoBehaviour
     {
  
         if (collision.CompareTag("DropItem")) { return; }
-        if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x * 0.3f)
-        {
+        //if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x / 2.0f)
+        //{
             if(collision.gameObject.name != ("Coll"))
             {            //ターゲット名からターゲットとそのスクリプトを取得
-                controller = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
- 
-                MoveFlg = true;
-            }
+                attackTarget = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
 
-        }
+                StartCoroutine("MovingCancel");
+            }
+        //}
 
     }
+
+    IEnumerator MovingCancel()
+    {
+        yield return new WaitForSeconds(0.1f);
+        isStop = true;
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag(this.tag)) { return; }
-        MoveFlg = false;
+        //if (collision.CompareTag(this.tag)) { return; }
+        StartCoroutine("MovingStart");
         anim.SetBool("AttackFlg", false);
         //controller = null;
+    }
+
+    IEnumerator MovingStart()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isStop = false;
     }
 }

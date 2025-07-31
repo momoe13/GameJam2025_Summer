@@ -4,13 +4,10 @@ using UnityEngine;
 public class CastelManager : MonoBehaviour
 {
     [SerializeField] GameObject GameOver;
-    private void OnCollisionEnter2D(Collision2D collision)
+  
+    public void GetCastel()
     {
-
-        Debug.Log("‚ ‚ ‚ ‚ ");
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.tag == ("Enemy"))
-        {
+      
             GameOver.SetActive(true);
             Time.timeScale = 0.0f;
             //ƒ^ƒCƒgƒ‹‚É‘JˆÚ
@@ -19,6 +16,6 @@ public class CastelManager : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("0_TitleScene");
                 Time.timeScale = 1.0f;
             }
-        }
+
     }
 }
