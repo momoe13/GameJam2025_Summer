@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class Character_Controller : MonoBehaviour
 {
-    [Header("キャラID。一旦0なら右に移動。0以外は左に移動になってます")]
-    [SerializeField] int character_id;//���ʎq
+    [Header("プレイヤーキャラには✔入れる")]
+    [SerializeField] bool ally;//���ʎq
     int target_direction;             //�i�s����
 
     [Header("パラメーター")]
@@ -45,7 +45,7 @@ public class Character_Controller : MonoBehaviour
     private void Start()
     {
         //時機なら右に向かって動く
-        if (character_id == 0) { target_direction = 1; }
+        if (ally) { target_direction = 1; }
 
         else { target_direction = -1; }
 
@@ -116,8 +116,6 @@ public class Character_Controller : MonoBehaviour
         hp -= dm;
         DamageTex(dm);
         if (hp <= 0) { DieFlg = true; }
- 
- 
         Debug.Log("ダメージ"+this.gameObject.name);
     }
     private void DamageTex(int dm)
@@ -156,11 +154,10 @@ public class Character_Controller : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
- 
-        if (collision.CompareTag("DropItem")) { return; }
+
         //if (Vector3.Distance(transform.position, collision.transform.position) <= boxCollider.size.x / 2.0f)
         //{
-        if (collision.gameObject.name == ("kyassuru_0"))
+        if ( collision.gameObject.name == ("kyassuru_0"))
         {
             StartCoroutine("AttackWait");
 

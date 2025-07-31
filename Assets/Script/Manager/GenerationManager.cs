@@ -36,12 +36,15 @@ public class GenerationManager : MonoBehaviour
         }
     }
 
+    //プレイヤーキャラ生成
     private void PLGeneration()
     {
         Instantiate(CreatePrefabs[Type], this.transform.position, Quaternion.identity);
         GeneratFlg = false;
 
     }
+
+    //敵生成
     private void EnemyGeneration()
     {
         GameObject ene= Instantiate(CreatePrefabs[eneType], new Vector2(this.transform.position.x + 18.0f, this.transform.position.y), Quaternion.identity);
@@ -52,7 +55,7 @@ public class GenerationManager : MonoBehaviour
     }
 
 
-        public void SetNum(int num)
+    public void SetNum(int num)
     {
         Type = num;
         GeneratFlg = true;

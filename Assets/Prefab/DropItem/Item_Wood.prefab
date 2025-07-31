@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2844842328615916061}
   - component: {fileID: 5375432513937750588}
   - component: {fileID: 2717747788112271521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Item_Wood
   m_TagString: DropItem
   m_Icon: {fileID: 0}

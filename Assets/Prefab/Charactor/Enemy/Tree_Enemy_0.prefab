@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5125795088589590764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.77, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62,11 +62,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -2.77, y: -0.53}
+  m_Offset: {x: -2.270412, y: -0.8591838}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.5846407, y: 2.5509238}
+  m_Size: {x: 1.4454651, y: 3.209291}
   m_EdgeRadius: 0
 --- !u!1 &8695807413007316508
 GameObject:
@@ -217,7 +217,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &6409014801254165627
 MonoBehaviour:
@@ -231,15 +231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad1631f08c55fc46a75425787e9710b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character_id: 3
+  character_id: 5
   speed: 1
   hp: 3
-  attack_Timing: 3
-  attack_Time: 0
-  TargetTag: Player
-  attackPower: 2
+  coolTime: 0
+  attackPower: 1
   DamagePre: {fileID: 4028270255119797780, guid: b62c2186e4809a74ab7dd1a4c59c8030, type: 3}
-  MoveFlg: 0
+  isStop: 0
+  attackTarget: {fileID: 0}
   anim: {fileID: 7946203092498034421}
   DropItem: {fileID: 5943350418164276105, guid: 4f38bf7e5b88a7d4982e131e8d0fa4bd, type: 3}
 --- !u!61 &3715605883286934106
@@ -272,11 +271,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.32948256, y: -0.031378984}
+  m_Offset: {x: -0.25, y: -0.031378984}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -286,5 +285,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.8677015, y: 4.4547133}
+  m_Size: {x: 2, y: 4}
   m_EdgeRadius: 0

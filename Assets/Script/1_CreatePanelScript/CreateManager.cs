@@ -5,7 +5,7 @@ public class CreateManager : MonoBehaviour
     int[] CreateNum = new int [2];
 
     // GameObject[] CreatePrefabs;    //生成オブジェクト
-
+    int[] ItemNum =  {12,13,14,23,24,34};
 
     GenerationManager manager;
     
@@ -24,12 +24,32 @@ public class CreateManager : MonoBehaviour
         }
         else { CreateNum[1] = itemNum;
 
-            //キャラクター生成
+            if ( CreateNum[0]> CreateNum[1])
+            {
+                //値を入れ替える
+                (CreateNum[1], CreateNum[0]) = (CreateNum[0], CreateNum[1]);
+            }
+            //整数に変換
             int Item = CreateNum[0] * 10 + CreateNum[1];
-            //生成できるキャラか探す
-            manager.SetNum(Item);
+            //TODO:生成できるか探す
+            for(int i = 0; i < ItemNum.Length;i++)
+            {
+                if(ItemNum[i] == Item) {
+                    //番号を送る
+                    manager.SetNum(Item);
+                    break;
+                }
+            }
+            
             //選択初期化
             for (int i = 0; i < CreateNum.Length; i++) { CreateNum[i] = 0; }
+
+            /*
+            木　１
+            羽   4
+            木の実 　3
+            魔石　2
+             */
         }
     }
 
