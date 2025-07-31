@@ -240,7 +240,9 @@ MonoBehaviour:
   isStop: 0
   attackTarget: {fileID: 0}
   anim: {fileID: 7946203092498034421}
-  DropItem: {fileID: 5943350418164276105, guid: 4f38bf7e5b88a7d4982e131e8d0fa4bd, type: 3}
+  DropItem:
+  - {fileID: 5943350418164276105, guid: 4f38bf7e5b88a7d4982e131e8d0fa4bd, type: 3}
+  - {fileID: 5434697526803761139, guid: ffc4e6e6eddefe24cba7fc3a4c76f462, type: 3}
 --- !u!61 &3715605883286934106
 BoxCollider2D:
   m_ObjectHideFlags: 0

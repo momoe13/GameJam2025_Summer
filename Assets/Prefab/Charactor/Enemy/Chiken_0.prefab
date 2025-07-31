@@ -213,7 +213,9 @@ MonoBehaviour:
   isStop: 0
   attackTarget: {fileID: 0}
   anim: {fileID: 111694003382832052}
-  DropItem: {fileID: 5968803913284971615, guid: 28bf1935f9557f048bbdcf0b4f1206b8, type: 3}
+  DropItem:
+  - {fileID: 5968803913284971615, guid: 28bf1935f9557f048bbdcf0b4f1206b8, type: 3}
+  - {fileID: 6302830698289954543, guid: baafb36b5411ce34c80a2924e8683506, type: 3}
 --- !u!50 &7584539195635770817
 Rigidbody2D:
   serializedVersion: 5
@@ -279,7 +281,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.1, y: 7.46}
+    oldSize: {x: 4.0666666, y: 4.9733334}
     newSize: {x: 6.1, y: 7.46}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

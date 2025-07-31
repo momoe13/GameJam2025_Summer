@@ -94,12 +94,13 @@ public class GenerationManager : MonoBehaviour
         switch (num)
         {
             case 23:
-                num = 10;
+                num = 9;
                 break;
             case 24:
-                num = 11;
+                num = 10;
                 break;
             case 34:
+                num = 11;
                 break;
         }
         Type = num;

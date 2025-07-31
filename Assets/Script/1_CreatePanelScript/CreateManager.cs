@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CreateManager : MonoBehaviour
 {
+    [SerializeField]
     int[] CreateNum = new int [2];
 
     // GameObject[] CreatePrefabs;    //生成オブジェクト
@@ -40,7 +41,8 @@ public class CreateManager : MonoBehaviour
                     break;
                 }
             }
-            
+
+            Debug.Log(Item);
             //選択初期化
             for (int i = 0; i < CreateNum.Length; i++) { CreateNum[i] = 0; }
 

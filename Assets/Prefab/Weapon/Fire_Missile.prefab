@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwingObject: {fileID: 4414337489393908956, guid: 89d71c4c9d34d564493a2d32b6c2fbcd, type: 3}
   targetObject: {fileID: 0}
-  throwingAngle: 0
+  throwingAngle: 46
   coolTime: 5
-  minDis: 15
+  minDis: 20
