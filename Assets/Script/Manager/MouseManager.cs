@@ -1,13 +1,14 @@
 using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
-using Color = UnityEngine.Color;
 
 public class MouseManager : MonoBehaviour
 {
     DropItem drop;
     [SerializeField]    
     CircleCollider2D Coll;
+
+   
     void Start()
     {
         Coll.enabled = false;
