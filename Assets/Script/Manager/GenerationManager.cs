@@ -18,20 +18,40 @@ public class GenerationManager : MonoBehaviour
     List<GameObject> EnemyBox;
     int eneType = 0;
 
+    //ボスを生成したか
+    bool isBossGenerated = false;
+
     // TODO : ミサイルをとりあえず動かすための追加！！後で変えましょう
     public IReadOnlyList<GameObject> ActiveEnemyList => EnemyBox;
     
+
+    public Boss bossTest;
+    public void TestGenerateBoss()
+    {
+        //ボス生成
+        var obj = Instantiate(CreatePrefabs[5], GetEnemySpawnPos(), Quaternion.identity);
+        bossTest = obj.GetComponent<Boss>(); 
+    }
+
     private void Update()
     {
+        //プレイヤーのキャラクターを生成
         if (GeneratFlg) PLGeneration();
-        //ボスが出るまで更新する
-        gameTime = Time.deltaTime;
-        if (BossTime < gameTime)
+
+        //ボスの生成
+        if(!isBossGenerated)
         {
-            //ボス生成
-            Instantiate(CreatePrefabs[5], this.transform.position, Quaternion.identity);
+            gameTime = Time.deltaTime;
+            if (BossTime < gameTime)
+            {
+                //ボス生成
+                Instantiate(CreatePrefabs[5], GetEnemySpawnPos(), Quaternion.identity);
+                isBossGenerated = true;
+                return;
+            }
         }
-        
+
+        //nullになっている場所を掃除
         for (int i = 0; i < EnemyBox.Count; i++)
         {
             if(EnemyBox[i] == null) EnemyBox.Remove(EnemyBox[i]);
@@ -40,7 +60,6 @@ public class GenerationManager : MonoBehaviour
         //敵がｎ体以下なら生成
         if(EnemyBox.Count<maxEne)
         {
-
             EnemyGeneration();
         }
     }
@@ -56,11 +75,16 @@ public class GenerationManager : MonoBehaviour
     //敵生成
     private void EnemyGeneration()
     {
-        GameObject ene= Instantiate(CreatePrefabs[eneType], new Vector2(this.transform.position.x + 18.0f, this.transform.position.y), Quaternion.identity);
+        GameObject ene= Instantiate(CreatePrefabs[eneType], GetEnemySpawnPos(), Quaternion.identity);
        
         EnemyBox.Add(ene);
         eneType++;
         if (eneType > 1) eneType = 0;
+    }
+
+    private Vector2 GetEnemySpawnPos()
+    {
+        return new Vector2(this.transform.position.x + 18.0f, this.transform.position.y);
     }
 
 
