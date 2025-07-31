@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -16,7 +17,12 @@ public class Missile : MonoBehaviour
     [Header("UŒ‚”ÍˆÍ")]
     [SerializeField] float minDis;
 
-    
+    public IReadOnlyList<GameObject> activeEnemyList;
+    private void Start()
+    {
+        //Find‚Åæ“¾‚Í—Ç‚­‚È‚¢‚Ì‚ÅŒã‚Å•ÏX‚µ‚Ä‚­‚¾‚³‚¢
+        activeEnemyList = GameObject.Find("GenerationManager").GetComponent<GenerationManager>().ActiveEnemyList;
+    }
 
     void Update()
   {
