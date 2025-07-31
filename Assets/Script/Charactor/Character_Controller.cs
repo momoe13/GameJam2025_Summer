@@ -72,7 +72,7 @@ public class Character_Controller : MonoBehaviour
             attack_Time += Time.deltaTime;
 
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape)) { Damage(5); }
         ////Rayを配列にして当たったもの全て出す
         //RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, new Vector2(target_direction,0), 2.0f);//中心点、方向、長さ
         //Debug.DrawRay(transform.position, new Vector2(target_direction*2, 0), Color.red, 1.0f); // 長さ2、赤色で1秒間可視化
