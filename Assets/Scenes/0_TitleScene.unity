@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 1066861678}
   - component: {fileID: 1066861677}
   - component: {fileID: 1066861680}
+  - component: {fileID: 1066861681}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -501,7 +502,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 27, y: 149}
-  m_SizeDelta: {x: 600, y: 267.7}
+  m_SizeDelta: {x: 280, y: 207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066861677
 MonoBehaviour:
@@ -609,6 +610,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4278d7d25a9d4a34a9aa901762c407f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &1066861681
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066861675}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 95a74c6c95e81854888f1a37d17e07cd, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 95a74c6c95e81854888f1a37d17e07cd, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1201306065
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +638,7 @@ GameObject:
   - component: {fileID: 1201306066}
   - component: {fileID: 1201306068}
   - component: {fileID: 1201306067}
+  - component: {fileID: 1201306069}
   m_Layer: 5
   m_Name: ClickImage
   m_TagString: Untagged
@@ -643,8 +662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 16, y: 62.96795}
-  m_SizeDelta: {x: 265.5907, y: 125.9359}
+  m_AnchoredPosition: {x: 32, y: 300}
+  m_SizeDelta: {x: 214, y: 121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201306067
 MonoBehaviour:
@@ -684,6 +703,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201306065}
   m_CullTransparentMesh: 1
+--- !u!111 &1201306069
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201306065}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 01b153612906db646b551df2b4c741fa, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 01b153612906db646b551df2b4c741fa, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1807211575
 GameObject:
   m_ObjectHideFlags: 0
