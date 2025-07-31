@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 246763223}
   - component: {fileID: 246763225}
   - component: {fileID: 246763224}
+  - component: {fileID: 246763226}
   m_Layer: 5
   m_Name: Bag
   m_TagString: Untagged
@@ -494,6 +495,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246763222}
   m_CullTransparentMesh: 1
+--- !u!114 &246763226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246763222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57fae855f090f3d4cae23b8d39f5d024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &300291641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,6 +2067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemNum: 2
+  _count: 5
 --- !u!114 &1496240334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2243,6 +2257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemNum: 3
+  _count: 5
 --- !u!114 &1562535213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2718,6 +2733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemNum: 1
+  _count: 5
 --- !u!1 &1731084477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,6 +3057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemNum: 4
+  _count: 5
 --- !u!114 &2047096746
 MonoBehaviour:
   m_ObjectHideFlags: 0

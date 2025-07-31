@@ -151,6 +151,7 @@ MonoBehaviour:
   MoveFlg: 0
   TargetPos: {x: -5.3, y: -4}
   speed: 0.05
+  ItemNum: 1
 --- !u!50 &2717747788112271521
 Rigidbody2D:
   serializedVersion: 5
