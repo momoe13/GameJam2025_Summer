@@ -165,7 +165,7 @@ public class Character_Controller : MonoBehaviour
             CastelManager castel = GameObject.Find(collision.gameObject.name).GetComponent<CastelManager>();
             castel.CastelDamage();
         }
-        else if (collision.gameObject.name == ("Target"))
+        else if (collision.gameObject.tag == ("Target"))
         {            //ターゲット名からターゲットとそのスクリプトを取得
             attackTarget = GameObject.Find(collision.gameObject.name).GetComponent<Character_Controller>();
             Debug.Log(collision.gameObject.name);
