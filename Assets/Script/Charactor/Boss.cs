@@ -11,13 +11,16 @@ public class Boss:Character_Controller
         //死んだ
         Debug.Log("まだ動いてるよ");
         //クリアテキスト表示
-        Clar.SetActive(true);
+        if(Clar != null)
+        {
+            Clar.SetActive(true);
+        }
+
         Time.timeScale = 0.0f;
-        //タイトルに遷移
+        //ゲームオーバーに遷移
         if(Input.GetMouseButtonDown(0))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("0_TitleScene");
-            Time.timeScale = 1.0f;
+            SceneChange.GameClearLoadScene();
         }
     }
 }
